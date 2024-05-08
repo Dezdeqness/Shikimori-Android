@@ -16,8 +16,7 @@ enum class FilterType(val filterName: String) {
     UNKNOWN("");
 
     companion object {
-        fun fromString(value: String) = values()
-            .find { it.filterName == value } ?: UNKNOWN
+        fun fromString(value: String) = entries.find { it.filterName == value } ?: UNKNOWN
     }
 
 }

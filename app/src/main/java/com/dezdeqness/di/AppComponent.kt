@@ -4,6 +4,7 @@ import android.content.Context
 import com.dezdeqness.di.modules.AccountModule
 import com.dezdeqness.di.modules.DataModule
 import com.dezdeqness.di.modules.DatabaseModule
+import com.dezdeqness.di.modules.GenreModule
 import com.dezdeqness.di.modules.RemoteModule
 import com.dezdeqness.di.subcomponents.AnimeChronologyComponent
 import com.dezdeqness.di.subcomponents.AnimeComponent
@@ -38,6 +39,7 @@ import javax.inject.Singleton
         AccountModule::class,
         DataModule::class,
         DatabaseModule::class,
+        GenreModule::class
     ]
 )
 interface AppComponent {

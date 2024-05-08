@@ -17,7 +17,9 @@ class DatabaseModule {
             context.applicationContext,
             ShikimoriDatabase::class.java,
             "shikimori"
-        ).build()
+        )
+            .addMigrations(ShikimoriDatabase.MIGRATION_1_2)
+            .build()
     }
 
 }

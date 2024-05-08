@@ -15,6 +15,7 @@ import com.dezdeqness.data.provider.ConfigurationProvider
 import com.dezdeqness.data.provider.ResourceProvider
 import com.dezdeqness.data.provider.SettingsProvider
 import com.dezdeqness.data.repository.SettingsRepositoryImpl
+import com.dezdeqness.domain.repository.GenreRepository
 import com.dezdeqness.domain.repository.SettingsRepository
 import com.dezdeqness.presentation.action.ActionConsumer
 import com.dezdeqness.presentation.message.MessageConsumer
@@ -37,12 +38,14 @@ class AppModule {
         genreMapper: GenreMapper,
         filterMapper: FilterMapper,
         moshi: Moshi,
+        genreRepository: GenreRepository,
     ) =
         ConfigurationProvider(
             assetManager = assetManager,
             genreMapper = genreMapper,
             filterMapper = filterMapper,
             moshi = moshi,
+            genreRepository = genreRepository,
         )
 
     @Singleton

@@ -19,8 +19,8 @@ class FilterMapper @Inject constructor() {
 
     fun fromResponse(item: GenreEntity) =
         FilterEntity(
-            id = item.id,
-            name = item.name,
+            id = item.searchId,
+            name = item.russian,
             type = FilterType.GENRE,
         )
 

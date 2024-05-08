@@ -69,8 +69,8 @@ class AnimeDetailsComposer @Inject constructor(
                     .genreList
                     .map { genre ->
                         AnimeCell(
-                            id = genre.id,
-                            displayName = genre.name,
+                            id = genre.searchId,
+                            displayName = genre.russian,
                         )
                     }
                     .sortedBy { it.displayName }
