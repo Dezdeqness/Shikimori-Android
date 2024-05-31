@@ -14,6 +14,7 @@ class GenreRepositoryImpl @Inject constructor(
         genreRemoteDataSource
             .getGenres()
             .onSuccess {
+                genreLocalDataSource.clear()
                 genreLocalDataSource.saveGenres(it)
             }
 

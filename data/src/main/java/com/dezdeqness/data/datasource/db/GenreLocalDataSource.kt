@@ -8,4 +8,5 @@ interface GenreLocalDataSource {
 
     fun saveGenres(list: List<GenreEntity>)
 
+    fun clear()
 }

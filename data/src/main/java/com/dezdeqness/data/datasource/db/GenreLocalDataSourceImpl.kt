@@ -19,5 +19,9 @@ class GenreLocalDataSourceImpl @Inject constructor(
         val localList = list.map(genreMapper::toDatabase)
         genreDao.saveGenres(localList)
     }
+
+    override fun clear() {
+        genreDao.clear()
+    }
 }
 
